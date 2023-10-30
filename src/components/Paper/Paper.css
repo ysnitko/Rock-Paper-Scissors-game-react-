@@ -1,0 +1,15 @@
+.paper {
+  width: 200px;
+  height: 200px;
+  border: 20px solid hsl(230, 89%, 62%);
+  border-image-slice: 1;
+  border-radius: 50%;
+  background-image: url(../../helpers/img/icon-paper.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+}
+
+.paper:hover {
+  border: 20px solid hsl(230, 89%, 65%);
+}

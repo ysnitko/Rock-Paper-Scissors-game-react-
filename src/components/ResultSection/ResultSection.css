@@ -1,0 +1,17 @@
+.play-again {
+  padding: 10px 30px;
+  color: hsl(229, 25%, 31%);
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 8px;
+}
+
+.draw-result span {
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.play-again:hover {
+  color: hsl(349, 71%, 52%);
+}

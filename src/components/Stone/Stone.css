@@ -11,5 +11,11 @@
 }
 
 .stone:hover {
-  border: 20px solid hsl(349, 70%, 56%);
+  border-color: hsl(349, 70%, 56%);
+}
+
+.active-stone {
+  width: 300px;
+  height: 300px;
+  border: 35px solid hsl(349, 71%, 52%);
 }

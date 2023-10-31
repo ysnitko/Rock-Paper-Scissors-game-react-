@@ -1,17 +1,17 @@
-import React from "react";
-import Paper from "../Paper/Paper";
-import Stone from "../Stone/Stone";
-import Scissors from "../Scissors/Scissors";
-import "./SelectionField.css";
+import React from 'react';
+import Paper from '../Paper/Paper';
+import Stone from '../Stone/Stone';
+import Scissors from '../Scissors/Scissors';
+import './SelectionField.css';
 
-const SelectionField = () => {
+const SelectionField = ({ handleChoice }) => {
   return (
     <div className="selection-container">
       <div className="paper-scissors">
-        <Paper />
-        <Scissors />
+        <Paper handleChoice={handleChoice} />
+        <Scissors handleChoice={handleChoice} />
       </div>
-      <Stone />
+      <Stone handleChoice={handleChoice} />
     </div>
   );
 };

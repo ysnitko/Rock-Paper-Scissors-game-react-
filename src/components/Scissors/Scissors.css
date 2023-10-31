@@ -11,5 +11,11 @@
 }
 
 .scissors:hover {
-  border: 20px solid hsl(40, 84%, 53%);
+  border-color:  hsl(40, 84%, 53%);
+}
+
+.active-scissors {
+  width: 300px;
+  height: 300px;
+  border: 35px solid hsl(39, 89%, 49%);
 }

@@ -11,5 +11,11 @@
 }
 
 .paper:hover {
-  border: 20px solid hsl(230, 89%, 65%);
+  border-color: hsl(230, 89%, 65%);
+}
+
+.active-paper {
+  width: 300px;
+  height: 300px;
+  border: 35px solid hsl(230, 89%, 62%);
 }

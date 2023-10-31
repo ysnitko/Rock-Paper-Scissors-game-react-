@@ -1,7 +1,9 @@
 .rules {
   width: 100px;
+  margin-right: 100px;
   background: none;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 5px;
   color: hsl(217, 16%, 45%);
 }
+

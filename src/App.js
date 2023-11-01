@@ -8,18 +8,37 @@ import DrawSection from './components/DrawSection/DrawSection';
 const App = () => {
   const [current, setCurrent] = useState('');
   const [isChoosen, setIsChoosen] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const handleReset = () => {
+    setIsChoosen(false);
+    setCurrent('');
+  };
+
+  const computerChoice = () => {
+    const variant = ['paper', 'stone', 'scissors'];
+    const randomIndex = Math.floor(Math.random() * variant.length);
+    const item = variant[randomIndex];
+    return item;
+  };
 
   const handleChoice = (item) => {
     setCurrent(item);
     setIsChoosen(true);
-    console.log('current: ' + item);
   };
 
   return (
     <div className="main-container">
-      <ScoreSection />
+      <ScoreSection score={score} />
       {isChoosen ? (
-        <DrawSection isChoosen={isChoosen} current={current} />
+        <DrawSection
+          isChoosen={isChoosen}
+          current={current}
+          handleReset={handleReset}
+          computerChoice={computerChoice}
+          score={score}
+          setScore={setScore}
+        />
       ) : (
         <SelectionField
           current={current}

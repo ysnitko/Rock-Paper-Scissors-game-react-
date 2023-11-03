@@ -1,4 +1,7 @@
 .rules {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
   width: 100px;
   margin-right: 100px;
   background: none;

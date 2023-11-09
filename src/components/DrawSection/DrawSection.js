@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import Stone from "../Stone/Stone";
-import Empty from "../Empty/Empty";
-import Scissors from "../Scissors/Scissors";
-import ResultSection from "../ResultSection/ResultSection";
-import "./DrawSection.css";
-import Paper from "../Paper/Paper";
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import Stone from '../Stone/Stone';
+import Empty from '../Empty/Empty';
+import Scissors from '../Scissors/Scissors';
+import ResultSection from '../ResultSection/ResultSection';
+import './DrawSection.css';
+import Paper from '../Paper/Paper';
 
 const DrawSection = () => {
-  console.log("render DrawSection");
+  console.log('render DrawSection');
   const current = useSelector((store) => store?.currentReducer?.current);
   const [time, setTime] = useState(1);
 
@@ -26,7 +26,7 @@ const DrawSection = () => {
   }, [time]);
 
   const computerChoice = () => {
-    const variant = ["paper", "stone", "scissors"];
+    const variant = ['paper', 'stone', 'scissors'];
     const randomIndex = Math.floor(Math.random() * variant.length);
     const item = variant[randomIndex];
     return item;
@@ -38,25 +38,25 @@ const DrawSection = () => {
     <div className="draw-section">
       <div className="picked-turn">
         <span className="picked-text">YOU PICKED</span>
-        {current === "paper" ? (
+        {current === 'paper' ? (
           <Paper />
-        ) : "" || current === "stone" ? (
+        ) : '' || current === 'stone' ? (
           <Stone />
-        ) : "" || current === "scissors" ? (
+        ) : '' || current === 'scissors' ? (
           <Scissors />
         ) : (
-          ""
+          ''
         )}
       </div>
       {time === 0 && <ResultSection getCompChoice={getCompChoice} />}
 
       <div className="picked-turn">
         <span className="picked-text">THE HOUSE PICKED</span>
-        {time === 0 && getCompChoice === "stone" ? (
+        {time === 0 && getCompChoice === 'stone' ? (
           <Stone />
-        ) : "" || (time === 0 && getCompChoice === "scissors") ? (
+        ) : '' || (time === 0 && getCompChoice === 'scissors') ? (
           <Scissors />
-        ) : "" || (time === 0 && getCompChoice === "paper") ? (
+        ) : '' || (time === 0 && getCompChoice === 'paper') ? (
           <Paper />
         ) : (
           <Empty />

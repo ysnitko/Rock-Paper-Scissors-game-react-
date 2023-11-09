@@ -1,7 +1,9 @@
-import React from 'react';
-import './Stone.css';
+import React from "react";
+import "./Stone.css";
+import { useSelector } from "react-redux";
 
-const Stone = ({ handleChoice, isChoosen }) => {
+const Stone = ({ handleChoice }) => {
+  const isChoosen = useSelector((store) => store?.choosenReducer?.isChoosen);
   return (
     <>
       {isChoosen ? (
@@ -9,7 +11,7 @@ const Stone = ({ handleChoice, isChoosen }) => {
       ) : (
         <button
           className="stone"
-          onClick={() => handleChoice('stone')}
+          onClick={() => handleChoice("stone")}
         ></button>
       )}
     </>

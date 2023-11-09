@@ -1,7 +1,9 @@
-import React from 'react';
-import './Scissors.css';
+import React from "react";
+import "./Scissors.css";
+import { useSelector } from "react-redux";
 
-const Scissors = ({ handleChoice, isChoosen }) => {
+const Scissors = ({ handleChoice }) => {
+  const isChoosen = useSelector((store) => store?.choosenReducer?.isChoosen);
   return (
     <>
       {isChoosen ? (
@@ -9,7 +11,7 @@ const Scissors = ({ handleChoice, isChoosen }) => {
       ) : (
         <button
           className="scissors"
-          onClick={() => handleChoice('scissors')}
+          onClick={() => handleChoice("scissors")}
         ></button>
       )}
     </>

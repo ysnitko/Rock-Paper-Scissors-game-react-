@@ -1,67 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import Stone from '../Stone/Stone';
-import Empty from '../Empty/Empty';
-import Scissors from '../Scissors/Scissors';
-import ResultSection from '../ResultSection/ResultSection';
-import './DrawSection.css';
-import Paper from '../Paper/Paper';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import ResultSection from "../ResultSection/ResultSection";
+import "./DrawSection.css";
+import Player from "../Player/Player";
+import Computer from "../Computer/Computer";
+import { compChoiceAC } from "../../redux/actions/compChoiceAC";
 
 const DrawSection = () => {
-  console.log('render DrawSection');
-  const current = useSelector((store) => store?.currentReducer?.current);
+  console.log("render DrawSection");
   const [time, setTime] = useState(1);
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    const countdown = setInterval(() => {
-      setTime((prevTime) => prevTime - 1);
-    }, 1000);
-    if (time === 0) {
-      clearInterval(countdown);
-    }
+  // useEffect(() => {
+  //   const countdown = setInterval(() => {
+  //     setTime((prevTime) => prevTime - 1);
+  //   }, 1000);
+  //   if (time === 0) {
+  //     clearInterval(countdown);
+  //   }
 
-    return () => {
-      clearInterval(countdown);
-    };
-  }, [time]);
-
-  const computerChoice = () => {
-    const variant = ['paper', 'stone', 'scissors'];
-    const randomIndex = Math.floor(Math.random() * variant.length);
-    const item = variant[randomIndex];
-    return item;
-  };
-
-  const getCompChoice = computerChoice();
+  //   return () => {
+  //     clearInterval(countdown);
+  //   };
+  // }, [time]);
 
   return (
     <div className="draw-section">
-      <div className="picked-turn">
-        <span className="picked-text">YOU PICKED</span>
-        {current === 'paper' ? (
-          <Paper />
-        ) : '' || current === 'stone' ? (
-          <Stone />
-        ) : '' || current === 'scissors' ? (
-          <Scissors />
-        ) : (
-          ''
-        )}
-      </div>
-      {time === 0 && <ResultSection getCompChoice={getCompChoice} />}
-
-      <div className="picked-turn">
-        <span className="picked-text">THE HOUSE PICKED</span>
-        {time === 0 && getCompChoice === 'stone' ? (
-          <Stone />
-        ) : '' || (time === 0 && getCompChoice === 'scissors') ? (
-          <Scissors />
-        ) : '' || (time === 0 && getCompChoice === 'paper') ? (
-          <Paper />
-        ) : (
-          <Empty />
-        )}
-      </div>
+      <Player />
+      <ResultSection />
+      <Computer />
     </div>
   );
 };

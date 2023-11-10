@@ -1,12 +1,9 @@
 import React from "react";
 import "./Scissors.css";
-import { useSelector, useDispatch } from "react-redux";
-import { setCurrentAC } from "../../redux/actions/currentAC";
-import { isChoosenAC } from "../../redux/actions/choosenAC";
+import { useSelector } from "react-redux";
 
-const Scissors = () => {
+const Scissors = ({ handleChoice }) => {
   const isChoosen = useSelector((store) => store?.choosenReducer?.isChoosen);
-  const dispatch = useDispatch();
   return (
     <>
       {isChoosen ? (
@@ -14,10 +11,7 @@ const Scissors = () => {
       ) : (
         <button
           className="scissors"
-          onClick={() => {
-            dispatch(setCurrentAC("scissors"));
-            dispatch(isChoosenAC(true));
-          }}
+          onClick={() => handleChoice("scissors")}
         ></button>
       )}
     </>

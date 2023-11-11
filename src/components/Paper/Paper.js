@@ -1,18 +1,20 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setCurrentAC } from "../../redux/actions/currentAC";
-import { isChoosenAC } from "../../redux/actions/choosenAC";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrentAC } from '../../redux/actions/currentAC';
+import { isChoosenAC } from '../../redux/actions/choosenAC';
 
-import "./Paper.css";
-import { useNavigate } from "react-router-dom";
+import './Paper.css';
+import { useNavigate } from 'react-router-dom';
 
 const Paper = ({ handleResult }) => {
-  console.log("render Paper");
+  console.log('render Paper');
   const dispatch = useDispatch();
   const isChoosen = useSelector((store) => store?.choosenReducer?.isChoosen);
+  const isWin = useSelector((store) => store?.isWinnerReducer?.isWin);
+  const isLoose = useSelector((store) => store?.isLooseReducer?.isLoose);
   const navigate = useNavigate();
   const navigateDraw = () => {
-    navigate("/draw");
+    navigate('/draw');
   };
 
   return (
@@ -25,8 +27,8 @@ const Paper = ({ handleResult }) => {
           onClick={() => {
             navigateDraw();
             dispatch(isChoosenAC(true));
-            dispatch(setCurrentAC("paper"));
-            handleResult("paper");
+            dispatch(setCurrentAC('paper'));
+            handleResult('paper');
           }}
         ></button>
       )}

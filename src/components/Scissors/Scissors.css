@@ -23,7 +23,7 @@
   border: 35px solid hsl(39, 89%, 49%);
 }
 
-.winner {
+.winner-scissors {
   -webkit-box-shadow: 1px 0px 1px 40px hsla(39, 89%, 49%, 0.6);
   -moz-box-shadow: 1px 0px 1px 40px hsla(39, 89%, 49%, 0.6);
   box-shadow: 0 8px 0px 1px hsla(39, 89%, 49%, 0.6),

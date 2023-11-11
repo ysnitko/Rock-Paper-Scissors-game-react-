@@ -3,10 +3,16 @@ import "./Scissors.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentAC } from "../../redux/actions/currentAC";
 import { isChoosenAC } from "../../redux/actions/choosenAC";
+import { useNavigate } from "react-router-dom";
 
-const Scissors = () => {
+const Scissors = ({ handleResult }) => {
   const isChoosen = useSelector((store) => store?.choosenReducer?.isChoosen);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const navigateDraw = () => {
+    navigate("/draw");
+  };
+
   return (
     <>
       {isChoosen ? (
@@ -15,8 +21,10 @@ const Scissors = () => {
         <button
           className="scissors"
           onClick={() => {
-            dispatch(setCurrentAC("scissors"));
+            navigateDraw();
             dispatch(isChoosenAC(true));
+            dispatch(setCurrentAC("scissors"));
+            handleResult("scissors");
           }}
         ></button>
       )}

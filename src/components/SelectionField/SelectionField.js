@@ -4,16 +4,16 @@ import Stone from "../Stone/Stone";
 import Scissors from "../Scissors/Scissors";
 import "./SelectionField.css";
 
-const SelectionField = () => {
+const SelectionField = ({ handleResult }) => {
   console.log("render SelectionField");
 
   return (
     <div className="selection-container">
       <div className="paper-scissors">
-        <Paper />
-        <Scissors />
+        <Paper handleResult={handleResult} />
+        <Scissors handleResult={handleResult} />
       </div>
-      <Stone />
+      <Stone handleResult={handleResult} />
     </div>
   );
 };

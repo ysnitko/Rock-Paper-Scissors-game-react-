@@ -1,0 +1,37 @@
+.rules-card {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 25px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  gap: 35px;
+}
+
+.rules-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+}
+
+.close-btn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 50px;
+  background: none;
+  color: hsla(229, 25%, 31%, 0.3);
+  rotate: 45deg;
+  align-items: center;
+  justify-content: center;
+}

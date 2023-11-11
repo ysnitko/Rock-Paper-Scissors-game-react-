@@ -1,8 +1,23 @@
 .empty {
   width: 230px;
   height: 230px;
-  margin: 35px 0;
+  margin-top: 78px;
   border-radius: 50%;
   background-color: black;
   opacity: 0.1;
+}
+
+.picked-empty {
+  margin-top: 10px;
+  font-size: 24px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.picked-turn-empty {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
 }

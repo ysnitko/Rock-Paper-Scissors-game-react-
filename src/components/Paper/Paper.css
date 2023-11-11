@@ -1,4 +1,5 @@
 .paper {
+  display: block;
   width: 200px;
   height: 200px;
   border: 20px solid hsl(230, 89%, 62%);
@@ -8,6 +9,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 70px;
+  -webkit-box-shadow: 0px 0px 1px rgba(69, 89, 192, 1);
+  -moz-box-shadow: 0 8px 0px 1px rgba(69, 89, 192, 1);
+  box-shadow: 0 8px 0px 1px rgba(69, 89, 192, 1);
 }
 
 .paper:hover {
@@ -18,4 +22,13 @@
   width: 300px;
   height: 300px;
   border: 35px solid hsl(230, 89%, 62%);
+}
+
+.winner-paper {
+  -webkit-box-shadow: 1px 0px 1px 40px rgba(69, 89, 192, 0.8);
+  -moz-box-shadow: 1px 0px 1px 40px rgba(69, 89, 192, 0.8);
+  box-shadow: 0 8px 0px 1px rgba(69, 89, 192, 1),
+    1px 0px 1px 40px hsla(214, 47%, 23%, 0.9),
+    1px 0px 1px 80px hsla(214, 47%, 23%, 0.6),
+    1px 0px 1px 130px hsla(214, 47%, 23%, 0.4);
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import "./Rules.css";
 
-const Rules = () => {
-  const showRules = () => {};
-
-  return <button className="rules">RULES</button>;
+const Rules = ({ setIsShowRules }) => {
+  return (
+    <button className="rules" onClick={() => setIsShowRules(true)}>
+      RULES
+    </button>
+  );
 };
 
 export default Rules;

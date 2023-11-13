@@ -31,3 +31,23 @@
     1px 0px 1px 80px hsla(214, 47%, 23%, 0.6),
     1px 0px 1px 130px hsla(214, 47%, 23%, 0.4);
 }
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .stone,
+  .active-stone {
+    width: 130px;
+    height: 130px;
+    border: 15px solid hsl(349, 71%, 52%);
+    box-shadow: 0 6px 0px 1px hsla(349, 71%, 52%, 0.6);
+    background-size: 40%;
+  }
+
+  .winner-stone {
+    -webkit-box-shadow: 1px 0px 1px 15px hsla(349, 71%, 52%, 0.6);
+    -moz-box-shadow: 1px 0px 1px 30px hsla(349, 71%, 52%, 0.6);
+    box-shadow: 0 8px 0px 1px hsla(349, 71%, 52%, 0.6),
+      1px 0px 1px 15px hsla(214, 47%, 23%, 0.9),
+      1px 0px 1px 30px hsla(214, 47%, 23%, 0.6),
+      1px 0px 1px 45px hsla(214, 47%, 23%, 0.4);
+  }
+}

@@ -7,8 +7,6 @@ import Paper from "../Paper/Paper";
 const Player = ({ handleResult }) => {
   const current = useSelector((store) => store?.currentReducer?.current);
 
-  console.log("render player");
-
   return (
     <div className="picked-turn">
       <span className="picked-text">YOU PICKED</span>

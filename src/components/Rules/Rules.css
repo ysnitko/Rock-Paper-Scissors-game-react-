@@ -2,11 +2,20 @@
   position: fixed;
   bottom: 20px;
   right: 0;
-  width: 100px;
+  width: 124px;
+  padding: 5px 20px;
   margin-right: 100px;
   background: none;
-  border: 2px solid hsl(217, 16%, 45%);
-  border-radius: 5px;
-  color: hsl(217, 16%, 45%);
+  border: 2px solid hsla(216, 7%, 86%, 0.7);
+  border-radius: 8px;
+  color: white;
+  letter-spacing: 2px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .rules {
+    justify-content: center;
+    margin-right: 0;
+    right: auto;
+  }
+}

@@ -3,7 +3,6 @@
 .draw-section {
   display: flex;
   flex-direction: row;
-  /* width: 1000px; */
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
@@ -17,6 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 30px;
+  z-index: -1;
 }
 
 .draw-result {
@@ -26,20 +26,33 @@
   gap: 20px;
 }
 
-/* .picked {
-  width: 300px;
-  height: 300px;
-  border: 20px solid hsl(39, 89%, 49%);
-  border-image-slice: 1;
-  border-radius: 50%;
-  background-image: url(../../helpers/img/icon-scissors.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 70px;
-} */
-
 .picked-text {
   font-size: 24px;
   color: white;
   letter-spacing: 3px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .picked-turn {
+    width: 180px;
+    height: 180px;
+  }
+
+  .draw-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .draw-result {
+    grid-column: span 2;
+    order: 3;
+    margin-top: 100px;
+  }
+
+  .picked-text {
+    order: 2;
+    font-size: 12px;
+    gap: 20px;
+  }
 }

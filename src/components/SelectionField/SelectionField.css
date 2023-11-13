@@ -17,3 +17,11 @@
   align-items: stretch;
   justify-content: space-between;
 }
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .selection-container {
+    width: 300px;
+    height: 300px;
+    background: url(../../helpers/img/bg-triangle-mobile.svg) no-repeat 0% 250%;
+  }
+}

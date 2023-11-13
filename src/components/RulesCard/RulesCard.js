@@ -5,12 +5,10 @@ import "./RulesCard.css";
 const RulesCard = ({ setIsShowRules }) => {
   return (
     <div className="rules-card">
-      <div className="rules-card-header">
-        <span className="header-title">RULES</span>
-        <button className="close-btn" onClick={() => setIsShowRules(false)}>
-          +
-        </button>
-      </div>
+      <span className="header-title">RULES</span>
+      <button className="close-btn" onClick={() => setIsShowRules(false)}>
+        +
+      </button>
       <img className="rules-guide" src={guide} alt="guide" />
     </div>
   );

@@ -1,7 +1,9 @@
 .rules-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   position: absolute;
+  max-width: 400px;
   top: 50%;
   left: 50%;
   padding: 25px;
@@ -9,12 +11,14 @@
   background-color: white;
   border-radius: 10px;
   gap: 35px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.rules-card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.rules-guide {
+  margin: 0 auto;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .header-title {
@@ -34,4 +38,29 @@
   rotate: 45deg;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .rules-card {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    top: 0%;
+    left: 0%;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .close-btn {
+    order: 3;
+  }
+
+  .rules-guide {
+    width: auto;
+    max-width: none;
+    flex-grow: inherit;
+    height: 35%;
+  }
 }

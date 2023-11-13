@@ -6,7 +6,6 @@ import Computer from "../Computer/Computer";
 import Empty from "../Empty/Empty";
 
 const DrawSection = () => {
-  console.log("render DrawSection");
   const [time, setTime] = useState(1);
 
   useEffect(() => {

@@ -32,3 +32,23 @@
     1px 0px 1px 80px hsla(214, 47%, 23%, 0.6),
     1px 0px 1px 130px hsla(214, 47%, 23%, 0.4);
 }
+
+@media screen and (min-width: 320px) and (max-width: 649px) {
+  .paper,
+  .active-paper {
+    width: 130px;
+    height: 130px;
+    border: 15px solid hsl(230, 89%, 62%);
+    box-shadow: 0 6px 0px 1px rgba(69, 89, 192, 1);
+    background-size: 40%;
+  }
+
+  .winner-paper {
+    -webkit-box-shadow: 1px 0px 1px 15px rgba(69, 89, 192, 0.8);
+    -moz-box-shadow: 1px 0px 1px 30px rgba(69, 89, 192, 0.8);
+    box-shadow: 0 8px 0px 1px rgba(69, 89, 192, 1),
+      1px 0px 1px 15px hsla(214, 47%, 23%, 0.9),
+      1px 0px 1px 30px hsla(214, 47%, 23%, 0.6),
+      1px 0px 1px 45px hsla(214, 47%, 23%, 0.4);
+  }
+}

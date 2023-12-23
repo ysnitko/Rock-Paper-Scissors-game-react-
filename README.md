@@ -3,6 +3,8 @@
 The project is a rock paper scissors game. Based on an assignment from a popular learning platform frontendmentor.io
 [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
 
+![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/desktop-step-1.jpg)
+
 ## Table of contents
 
 - [Overview](#overview)

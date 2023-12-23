@@ -5,6 +5,8 @@ The project is a rock paper scissors game. Based on an assignment from a popular
 
 ![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/desktop-step-1.jpg)
 
+Live URL [Rock, Paper, Scissors](https://paper-stone-scissors-game.netlify.app/)
+
 ## How to start a project?
 
 1. Create a directory in which the project will be located.
@@ -37,4 +39,4 @@ React, Redux, CSS, HTML and JavaScript
 
 ![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/mobile-step-1.jpg)
 
-![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/mobile-step-4.jpg)
+![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/mobile-step-3.jpg)

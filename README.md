@@ -18,3 +18,13 @@ The project is a rock paper scissors game. Based on an assignment from a popular
 5. After downloading the libraries and dependencies, we start building the project using the command `npm run start`.
 
 6. The project will launch automatically in the browser or will be available at [http://localhost:3000](http://localhost:3000).
+
+## Rules the game
+
+![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/desktop-rules-modal.jpg)
+
+1. If you win +1 score.
+
+2. If you loose -1 score.
+
+3. If draw - 0 score

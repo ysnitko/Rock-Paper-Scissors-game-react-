@@ -28,3 +28,13 @@ The project is a rock paper scissors game. Based on an assignment from a popular
 2. If you loose -1 score.
 
 3. If draw - 0 score
+
+## Development stack
+
+React, Redux, CSS, HTML and JavaScript
+
+## The app is adapted for mobile devices
+
+![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/mobile-step-1.jpg)
+
+![ScreenShot](https://raw.github.com/ysnitko/Rock-Paper-Scissors-game-react-/main/design/original/mobile-step-4.jpg)
